@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChatController">
+   <children>
+      <AnchorPane fx:id="apChat" layoutX="1.0" onKeyPressed="#keyPressed" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #293241;">
+         <children>
+            <AnchorPane layoutX="-1.0" layoutY="478.0" prefHeight="122.0" prefWidth="717.0" style="-fx-background-color: #41436a;" />
+            <AnchorPane layoutX="-8.0" prefHeight="470.0" prefWidth="724.0" style="-fx-background-color: #293241;" />
+            <TextField fx:id="tfUserMessage" alignment="TOP_LEFT" layoutX="88.0" layoutY="490.0" prefHeight="76.0" prefWidth="355.0" promptText="Type here..." />
+            <ScrollPane fx:id="spUsers" layoutX="457.0" layoutY="56.0" prefHeight="409.0" prefWidth="181.0" />
+            <ScrollPane fx:id="spMessages" layoutX="88.0" layoutY="56.0" prefHeight="409.0" prefWidth="355.0">
+               <content>
+                  <AnchorPane prefHeight="389.0" prefWidth="347.0">
+                     <children>
+                        <VBox fx:id="messagesArea" layoutX="3.0" prefHeight="381.0" prefWidth="342.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label fx:id="lQuit" layoutX="26.0" layoutY="513.0" onMouseClicked="#openChatMenu" text="Quit" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="483.0" layoutY="513.0" text="Send">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="bSend" layoutX="457.0" layoutY="490.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="76.0" prefWidth="84.0" text="Send" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

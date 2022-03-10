@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SearchController">
+   <children>
+      <AnchorPane onKeyPressed="#keyPressed" prefHeight="350.0" prefWidth="680.0" style="-fx-background-color: #293241;">
+         <children>
+            <ImageView fx:id="bAddFriend" fitHeight="31.0" fitWidth="36.0" layoutX="591.0" layoutY="243.0" onMouseClicked="#addFriend" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/add-friend-icon-219.png" />
+               </image></ImageView>
+            <TextField fx:id="tfSearch" layoutX="48.0" layoutY="46.0" onInputMethodTextChanged="#updateSearchOutput" prefHeight="31.0" prefWidth="352.0" promptText="Enter text here" style="-fx-border-color: #41436a;" />
+            <ComboBox fx:id="searchBy" layoutX="421.0" layoutY="46.0" onAction="#updateSearchOutput" onInputMethodTextChanged="#updateSearchOutput" prefHeight="31.0" prefWidth="108.0" promptText="Search by" />
+            <ListView fx:id="lvSearchOutput" layoutX="48.0" layoutY="111.0" prefHeight="163.0" prefWidth="477.0" style="-fx-background-color: #41436a;" />
+            <Label fx:id="bReturn" alignment="CENTER" layoutX="48.0" layoutY="282.0" onMouseClicked="#openMainProg" text="Return" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="bSearch" fitHeight="50.0" fitWidth="74.0" layoutX="581.0" layoutY="37.0" onMouseClicked="#updateSearchOutput" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/search-button-icon-png-26.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="cbGameNames" layoutX="48.0" layoutY="46.0" prefHeight="30.0" prefWidth="352.0" visible="false" />
+            <Label fx:id="lStatusAdd" alignment="CENTER" contentDisplay="CENTER" layoutX="564.0" layoutY="289.0" prefHeight="17.0" prefWidth="85.0" textAlignment="CENTER" textFill="#04ff00" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

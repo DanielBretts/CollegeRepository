@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChatMenuController">
+   <children>
+      <AnchorPane fx:id="apChatMenu" prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <Button fx:id="bFriendChats" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#showFriendChats" text="Show friend chats" />
+            <Button fx:id="bGroupChats" layoutX="14.0" layoutY="98.0" mnemonicParsing="false" onAction="#showGroupChats" text="Show group chats" />
+            <Button fx:id="bGameChats" layoutX="14.0" layoutY="56.0" mnemonicParsing="false" onAction="#showGameChats" text="Show game chats" />
+            <Button fx:id="bReturn" layoutX="14.0" layoutY="330.0" mnemonicParsing="false" text="return" />
+            <Button fx:id="bOpenChat" layoutX="184.0" layoutY="288.0" mnemonicParsing="false" text="open chat" />
+            <ListView fx:id="lvChats" layoutX="184.0" layoutY="21.0" prefHeight="265.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainProgController">
+   <children>
+      <AnchorPane prefHeight="108.0" prefWidth="590.0" style="-fx-background-color: #41436a;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="500.0">
+               <children>
+                  <MenuButton fx:id="bPlay" mnemonicParsing="false" onAction="#openGamesMenu" onMouseClicked="#openGamesMenu" prefHeight="100.0" prefWidth="100.0">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/�����%20���%202022-01-13%20144152.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+                  <Button fx:id="bChats" mnemonicParsing="false" onAction="#openChatMenu" prefHeight="100.0" prefWidth="100.0">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/�����%20���%202022-01-13%20144212.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="bSearch" mnemonicParsing="false" onAction="#openSearchMenu" prefHeight="100.0" prefWidth="100.0">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/�����%20���%202022-01-13%20144229.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="bProfile" mnemonicParsing="false" onAction="#openProfileMenu" prefHeight="100.0" prefWidth="100.0">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/�����%20���%202022-01-13%20144252.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="bLogOut" mnemonicParsing="false" onAction="#openLoginMenu" prefHeight="100.0" prefWidth="100.0">
+                     <graphic>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/�����%20���%202022-01-13%20144324.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?fxml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LogInController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="450.0">
+         <children>
+            <ImageView fitHeight="500.0" fitWidth="450.0" layoutX="-6.0" opacity="0.94" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/LoginBG.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" layoutX="140.0" layoutY="64.0" prefHeight="42.0" prefWidth="153.0" text="Welcome!" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="329.0" fitWidth="345.0" layoutX="46.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/LOGO.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutX="443.0" prefHeight="500.0" prefWidth="363.0" style="-fx-background-color: #323232;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="122.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/679a8ce044245372ca495c4c9c151225.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="43.0" layoutY="181.0" prefHeight="3.0" prefWidth="258.0" />
+            <Label layoutX="68.0" layoutY="198.0" text="Username" textFill="WHITE" />
+            <TextField fx:id="tFUsername" layoutX="141.0" layoutY="194.0" onKeyPressed="#buttonPressed" promptText="Enter username here" />
+            <Label layoutX="70.0" layoutY="239.0" text="Password" textFill="WHITE" />
+            <PasswordField fx:id="pFPassword" layoutX="141.0" layoutY="235.0" onKeyPressed="#buttonPressed" promptText="Enter password here" />
+            <Separator layoutX="40.0" layoutY="225.0" prefHeight="3.0" prefWidth="258.0" />
+            <Label fx:id="lError" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="320.0" textAlignment="CENTER" textFill="RED" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lRegister" layoutX="121.0" layoutY="419.0" onMouseClicked="#openRegister" text="Not registered yet?" textFill="WHITE" />
+            <Label fx:id="lLogin" layoutX="144.0" layoutY="366.0" onMouseClicked="#logIn" text="Log In" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

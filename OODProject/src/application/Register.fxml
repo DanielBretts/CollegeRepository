@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="939.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterController">
+   <children>
+      <AnchorPane fx:id="aPRegisterPaneFirst" layoutX="415.0" prefHeight="500.0" prefWidth="514.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="222.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/679a8ce044245372ca495c4c9c151225.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="136.0" layoutY="188.0" prefHeight="3.0" prefWidth="272.0" />
+            <Label layoutX="139.0" layoutY="211.0" text="Username" textFill="WHITE" />
+            <TextField fx:id="tFUsername" layoutX="219.0" layoutY="206.0" promptText="Enter username here" />
+            <Label layoutX="141.0" layoutY="253.0" text="Password" textFill="WHITE" />
+            <PasswordField fx:id="pFPassword" layoutX="219.0" layoutY="248.0" promptText="Enter password here" />
+            <Label fx:id="lError" alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="359.0" prefHeight="27.0" prefWidth="486.0" textAlignment="CENTER" textFill="RED" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="-1.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="bNext" layoutX="226.0" layoutY="405.0" mnemonicParsing="false" onAction="#openGameChooser" prefHeight="39.0" prefWidth="92.0" text="Next &gt;&gt;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="cbBirthYears" layoutX="219.0" layoutY="290.0" prefHeight="31.0" prefWidth="110.0" />
+            <Label layoutX="140.0" layoutY="295.0" text="Birth Year" textFill="WHITE" />
+            <Separator layoutX="136.0" layoutY="346.0" prefHeight="3.0" prefWidth="272.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="aPRegisterPaneSecond" layoutX="436.0" prefHeight="500.0" prefWidth="503.0" visible="false">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="201.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/679a8ce044245372ca495c4c9c151225.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bBack" layoutX="157.0" layoutY="404.0" mnemonicParsing="false" onAction="#backToFirstRegister" prefHeight="39.0" prefWidth="100.0" text="&lt;&lt; Back">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bRegister" defaultButton="true" layoutX="266.0" layoutY="404.0" mnemonicParsing="false" onAction="#register" prefHeight="39.0" prefWidth="92.0" text="Register">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="bAddGame" layoutX="218.0" layoutY="225.0" mnemonicParsing="false" onAction="#addGameToFavorites" prefHeight="25.0" prefWidth="79.0" text="&gt;&gt;" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="217.0" />
+            <Button fx:id="bRemoveGame" layoutX="218.0" layoutY="277.0" mnemonicParsing="false" onAction="#removeGameFromFavorites" prefHeight="25.0" prefWidth="79.0" text="&lt;&lt;" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="217.0" />
+            <ListView fx:id="lvGamesList" layoutX="14.0" layoutY="177.0" prefHeight="200.0" prefWidth="194.0" AnchorPane.leftAnchor="14.0" />
+            <ListView fx:id="lvGamesChosen" layoutX="289.0" layoutY="177.0" prefHeight="200.0" prefWidth="194.0" AnchorPane.rightAnchor="14.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-3.0" prefHeight="500.0" prefWidth="453.0">
+         <children>
+            <ImageView fitHeight="500.0" fitWidth="450.0" layoutX="-11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/LoginBG.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" layoutX="130.0" layoutY="57.0" prefHeight="42.0" prefWidth="169.0" text="Welcome!" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="bBackToLogin" alignment="CENTER" layoutX="170.0" layoutY="434.0" mnemonicParsing="false" onAction="#openLogIn" text="Back to Login" />
+            <ImageView fitHeight="329.0" fitWidth="345.0" layoutX="50.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/LOGO.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

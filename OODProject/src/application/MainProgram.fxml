@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainProgController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="bChats" contentDisplay="CENTER" layoutX="120.0" mnemonicParsing="false" onAction="#openChatMenu" prefHeight="100.0" prefWidth="120.0" text="Chats" textAlignment="CENTER" />
+            <Button fx:id="bSeatch" contentDisplay="CENTER" layoutX="240.0" mnemonicParsing="false" onAction="#openSearchMenu" prefHeight="100.0" prefWidth="120.0" text="Search" textAlignment="CENTER" />
+            <Button fx:id="bProfile" contentDisplay="CENTER" layoutX="360.0" mnemonicParsing="false" onAction="#openProfileMenu" prefHeight="100.0" prefWidth="120.0" text="Profile" textAlignment="CENTER" />
+            <Button fx:id="bLogOut" contentDisplay="CENTER" layoutX="480.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" style="-fx-graphic: url('../OODProject/Images/Chat.png');" text="Log Out" textAlignment="CENTER" />
+            <SplitMenuButton fx:id="bPlay" mnemonicParsing="false" prefHeight="100.0" prefWidth="120.0" text="Play">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </SplitMenuButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
